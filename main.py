@@ -24,7 +24,13 @@ def  PlayTimeGenre(genero: str):
         
     return {f'Año de lanzamiento con más horas jugadas para Género {genero}': resultado}
 
-def recomendacion_juego(item_id):
+@app.get('/ Recomendacion_juego/{item_id}')
+def Recomendacion_juego(item_id : int):
+    '''
+      Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.
+        
+    '''
+
     # se carga los datasets que se va a utilizar para dos dataframes distintos
     data = pd.read_csv('data/df_juegos_steam.csv')
     data_juegos_steam = pd.read_csv('data/df_juegos_id.csv')
