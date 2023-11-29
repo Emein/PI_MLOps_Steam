@@ -19,8 +19,5 @@ def  PlayTimeGenre(genero: str):
 
     resultado = data_filtrada['anio']
     
-    result_dict = {
-        '{"Año de lanzamiento con más horas jugadas para Género {genero}" :}': resultado.to_dict()
-    }
-    
-    return result_dict
+        
+    return {f'Año de lanzamiento con más horas jugadas para Género {genero}': resultado}
