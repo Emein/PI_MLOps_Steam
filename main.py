@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-df_funcion1 = pd.read_parquet('data/df_funcion1.parquet')
+df_funcion1 = pd.read_csv('data/df_funcion1.csv')
 df_funcion2 = pd.read_csv('data/df_funcion2.csv')
 
 
