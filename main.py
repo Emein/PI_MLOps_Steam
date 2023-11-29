@@ -17,7 +17,7 @@ def  PlayTimeGenre(genero: str):
     # Filtra el dataframe por desarrollador de interés
     data_filtrada = df_funcion1[df_funcion1['genero'] == genero]
 
-    resultado = data_filtrada['anio']
+    resultado = data_filtrada['anio'].to_dict()
     
         
     return {f'Año de lanzamiento con más horas jugadas para Género {genero}': resultado}
